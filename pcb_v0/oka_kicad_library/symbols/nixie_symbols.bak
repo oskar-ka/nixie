@@ -6,7 +6,7 @@
     (property "Value" "74141" (at 0 1.27 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "" (at 0 0 0)
+    (property "Footprint" "Package_DIP:DIP-16_W7.62mm_LongPads" (at -4.445 -27.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (at 0 0 0)
