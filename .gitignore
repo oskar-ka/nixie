@@ -1,4 +1,34 @@
+#LTspice:
 *.log
 *.net
 *.raw
 *.plt
+
+#KiCad
+# Ignore temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+
+# Ignore netlist files (exported from Eeschema)
+*.net
+
+# Ignore autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+# Ignore exported BOM files
+*.xml
+*.csv
+
+# Ignore backups
+MainboardV1-backups/
+MainboardV1-backups/*
