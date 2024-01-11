@@ -3202,7 +3202,7 @@
     (property "Value" "ATtiny2313-20P" (at 252.3841 93.98 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_DIP:DIP-20_W7.62mm" (at 250.19 121.92 0)
+    (property "Footprint" "Package_DIP:DIP-20_W7.62mm_LongPads" (at 250.19 121.92 0)
       (effects (font (size 1.27 1.27) italic) hide)
     )
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-2543-AVR-ATtiny2313_Datasheet.pdf" (at 250.19 121.92 0)
