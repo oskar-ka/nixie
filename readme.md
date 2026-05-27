@@ -17,6 +17,7 @@ nixierørene kan denne spænding bruges direkte; 5V AC-DC
     - Kan evt. også laves som halvbølgeensretter, da den ikke skal levere ret meget strøm
 - 230Vac &rarr; transformer 230Vac&rarr;125Vac &rarr; ensretter (styret/ikke styret); & 5V AC-DC
     - Ret nemt, få komponenter, ret effektivt, galvanisk adskillelse
+    - Eller brug autotransformer, nemme at finde med 2-1 da de laver EU spænding om til US
 - 230Vac &rarr; reguleret flyback converter med 2 udgange!!
     - Ret sej løsning, galvanisk adskillelse, høj virkningsgrad, ikke nemt.
     - 
