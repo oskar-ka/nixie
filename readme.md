@@ -7,7 +7,7 @@ Dimming?
 
 
 ## Strømforsyning
-Nixie uret skal bruge to spændinger for at fungere: 5Vdc til microcontroller og logiske kredse, samt 180Vdc til at trække nixierørene.
+Nixie uret skal bruge to spændinger for at fungere: 5Vdc til microcontroller og logiske kredse, samt 180Vdc til at trække nixierørene. Hvert rør kan tåle op til 3.5mA, så med 6 rør skal strømforsyningen levere 21mA + lidt til de 4 små nixie prikker, så i alt maks. 30mA v. 180Vdc. Det er nok ikke nødvendigt med PFC ved 30mA, men det kunne måske være sjovt at lave hvis der er plads til det. Evt. kan strøforsyningen blive lavet på et separat print, som kan placeres under nixie-printet, så burde der være masser af plads. Skal den kunne skifte mellem 230Vac og 120Vac, og skal den gøre det automatisk?
 
 
 
@@ -33,6 +33,8 @@ nixierørene kan denne spænding bruges direkte; 5V AC-DC
     - Thyristorbroer er som regel store, ved ikke om man kan få en i DIP
 - 230Vac &rarr; styret MOSFET ensretter som giver 180Vdc direkte; 5V AC-DC
     - Mere effektiv end thyristorbro
+    - Skal bruge to MOSFETS hver vej for at kunne blokere = 8 MOSFETS
+    - Kan evt. også laves som halvbølgeensretter, da den ikke skal levere ret meget strøm
 - 230Vac &rarr; halveringstransformer 230V&rarr;115Vac &rarr; ensretter (styret/ikke styret); & 5V AC-DC
     - Ret nemt, få komponenter, ret effektivt, galvanisk adskillelse
     - Giver 160Vdc v. 230Vac, hvilket er fint, men hvis nettet går ned til 207Vdc så har vi kun 146Vdc hvilket ikke helt er nok
@@ -45,9 +47,15 @@ nixierørene kan denne spænding bruges direkte; 5V AC-DC
         - TO-252 [MJD340](https://mou.sr/4o38ar5): 8.3K/W op til 15W
         - TO-220 [BUL741](https://mou.sr/3Q8gnh7): 2K/W op til 60W med heatsink
         - TO-3 [MJ15024](https://mou.sr/4uGqn01): 0.7K/W op til 250W
-    - eller buck-converter
-- 230Vac &rarr; reguleret DC-forsyning med transformer med 2 udgange!!
-    - Ret sej løsning, galvanisk adskille, høj virkningsgrad, overhovedes ikke nemt.
+    - eller buck-converter?
+- 230Vac &rarr; transformer 230Vac&rarr;125Vac &rarr; ensretter (styret/ikke styret); & 5V AC-DC
+    - Ret nemt, få komponenter, ret effektivt, galvanisk adskillelse
+    - Eller brug autotransformer, nemme at finde med 2-1 da de laver EU spænding om til US
+- 230Vac &rarr; reguleret flyback converter med 2 udgange!!
+    - Ret sej løsning, galvanisk adskillelse, høj virkningsgrad, ikke nemt.
+    - 
+
+Skal power supply være på et separat print?
 
 
 ### Komponenter
