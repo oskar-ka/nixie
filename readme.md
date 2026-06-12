@@ -70,6 +70,12 @@ Skal power supply være på et separat print?
     - Fås i [sort](https://www.digikey.com/en/products/detail/fischer-elektronik/SK-64-37-5-SA-1-x-M3-TO-220/25827581) eller [natural](https://www.digikey.com/en/products/detail/fischer-elektronik/SK-64-37-5-ME-1-x-M3-TO-220/25828864)
     - Højde: 25mm
 
+### Heatsinks
+- [U-formet](https://fischerelektronik.de/web_fischer/en/heatsinks/A07/U-Extruded%20heatsinks/$catalogue/fischerData/PR/ICK35_SA_/search.xhtml), lidt større end den jeg har, 15K/W
+- [Sej en til TO-3](https://fischerelektronik.de/web_fischer/en/heatsinks/A01/Standard%20extruded%20heatsinks/$catalogue/fischerData/PR/SK36_/search.xhtml)
+- [SK 65](https://fischerelektronik.de/web_fischer/en/heatsinks/A01/Standard%20extruded%20heatsinks/$catalogue/fischerData/PR/SK65_/search.xhtml) Til SOT-32 transistor, lidt lavere end SK 64
+- [SK 31](https://fischerelektronik.de/web_fischer/en/heatsinks/A01/Standard%20extruded%20heatsinks/$catalogue/fischerData/PR/SK31_/search.xhtml) Til TO-3, kun 12mm høj
+
 ### Komponenter
 - AC Sikring + sikringsholder
     - 100mA glassikring?
@@ -114,3 +120,12 @@ Skal power supply være på et separat print?
     - Shift register x4
     - Quad optokobler f.eks. LTV-845M x4
     - SN74141 x4
+
+## Case
+### Varmeafgivelse
+- Original laserskåret lagkagekasse
+    - Test 1: P=4W, UT=22C, IT=67C &rarr; +45C v. 4W = 11.25 K/W
+    - Test 2: P=3W, UT=22C, IT=58C &rarr; +36C v. 3W = 12    K/W
+    - Test 3: P=2W, UT=22C, IT=49C &rarr; +26C v. 2W = 13.5  K/W
+    - Test 4: P=1W, UT=22C, IT=38C &rarr; +16C v. 1W = 16    K/W
+    
