@@ -29,34 +29,46 @@ Nixie uret skal bruge to spændinger for at fungere: 5Vdc til microcontroller og
 - 230Vac indgang &rarr; diodebro som giver 325Vdc, med den rigtige modstand før 
 nixierørene kan denne spænding bruges direkte; 5V AC-DC
     - Rimelig ueffektivt og ikke så sejt, men meget nemt
+    - Nixiestrøm afhængig af netspænding
 - 230Vac &rarr; styret thyristorbro som giver 180Vdc direkte; 5V AC-DC
     - Thyristorbroer er som regel store, ved ikke om man kan få en i DIP
 - 230Vac &rarr; styret MOSFET ensretter som giver 180Vdc direkte; 5V AC-DC
     - Mere effektiv end thyristorbro
     - Skal bruge to MOSFETS hver vej for at kunne blokere = 8 MOSFETS
     - Kan evt. også laves som halvbølgeensretter, da den ikke skal levere ret meget strøm
-- 230Vac &rarr; halveringstransformer 230V&rarr;115Vac &rarr; ensretter (styret/ikke styret); & 5V AC-DC
-    - Ret nemt, få komponenter, ret effektivt, galvanisk adskillelse
-    - Giver 160Vdc v. 230Vac, hvilket er fint, men hvis nettet går ned til 207Vdc så har vi kun 146Vdc hvilket ikke helt er nok
+- ~~230Vac &rarr; halveringstransformer 230V&rarr;115Vac &rarr; ensretter (styret/ikke styret); & 5V AC-DC~~
+    - ~~Ret nemt, få komponenter, ret effektivt, galvanisk adskillelse~~
+    - ~~Giver 160Vdc v. 230Vac, hvilket er fint, men hvis nettet går ned til 207Vdc så har vi kun 146Vdc hvilket ikke helt er nok~~
 - 230Vac &rarr; 2/3-transformer = 195/217/239Vdc (min, nom, max)
     - enten direkte til nixierør, kunne sikkert fungere
+        - Her vil varmetab være i modstande og måske IC, bedre at have det centreret i en NPN med varmeplade
     - eller transistor med varmetab
         - skal smide mellem 15-59V
         - ved 20mA &rarr; 0.3W-1.2W
         - TO-92: [PHE13003A](https://mou.sr/43Gdbwc) 60K/W, nogle af dem måske op til 2W??
         - TO-252 [MJD340](https://mou.sr/4o38ar5): 8.3K/W op til 15W
-        - TO-220 [BUL741](https://mou.sr/3Q8gnh7): 2K/W op til 60W med heatsink
+        - TO-220 [BUL741](https://mou.sr/3Q8gnh7): 2K/W op til 60W
         - TO-3 [MJ15024](https://mou.sr/4uGqn01): 0.7K/W op til 250W
     - eller buck-converter?
-- 230Vac &rarr; transformer 230Vac&rarr;125Vac &rarr; ensretter (styret/ikke styret); & 5V AC-DC
-    - Ret nemt, få komponenter, ret effektivt, galvanisk adskillelse
-    - Eller brug autotransformer, nemme at finde med 2-1 da de laver EU spænding om til US
 - 230Vac &rarr; reguleret flyback converter med 2 udgange!!
     - Ret sej løsning, galvanisk adskillelse, høj virkningsgrad, ikke nemt.
     - 
 
 Skal power supply være på et separat print?
 
+### Varmeplader
+- Fischer Eletronik SK 13
+    - 17 K/W
+    - Lille U-formet, mindste heatsink som kan bruges
+    - Højde: 13mm
+- Mindste PCB mount
+    - [link](https://www.digikey.com/en/products/detail/boyd-laconia-llc/581002B02500G/1216391)
+    - 17.4 K/W
+    - Højde: 25.4mm
+- Fischer Elektronik SK 64
+    - 2.7 K/W
+    - Fås i [sort](https://www.digikey.com/en/products/detail/fischer-elektronik/SK-64-37-5-SA-1-x-M3-TO-220/25827581) eller [natural](https://www.digikey.com/en/products/detail/fischer-elektronik/SK-64-37-5-ME-1-x-M3-TO-220/25828864)
+    - Højde: 25mm
 
 ### Komponenter
 - AC Sikring + sikringsholder
