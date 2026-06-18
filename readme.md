@@ -79,6 +79,9 @@ Skal power supply være på et separat print?
 - Adam tech
     - HSK-53-01 Højde: 18.5mm
     - HSK-55-01 Højde: 18.5mm
+- [680-5A](https://mou.sr/4eQcQgR)
+    - 12.7mm højde
+    - 46x46mm footprint
 
 
 ### Heatsinks
