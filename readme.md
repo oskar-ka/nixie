@@ -140,3 +140,4 @@ Skal power supply være på et separat print?
     - Test 3: P=2W, UT=22C, IT=49C &rarr; +26C v. 2W = 13.5  K/W
     - Test 4: P=1W, UT=22C, IT=38C &rarr; +16C v. 1W = 16    K/W
     
+SMD keramiske kondensatorer 2.2uF 450V [her](https://mou.sr/4eBqHqi)
