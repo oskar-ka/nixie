@@ -5589,6 +5589,56 @@
 		)
 		(uuid "14d15991-60cc-4721-90c2-d2287a649c77")
 	)
+	(label "minutes_en"
+		(at 292.1 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "17173fbb-4f3d-432e-8135-5bcc1c1bae72")
+	)
+	(label "seconds_en"
+		(at 292.1 101.6 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2245d7e6-ac6c-46aa-b417-bd3decb02749")
+	)
+	(label "minutes_en"
+		(at 350.52 200.66 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3d0a36f1-0aec-47e6-9d73-8570e752e1ef")
+	)
+	(label "hours_en"
+		(at 350.52 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6077c563-50e4-4501-9e6e-94c4624f5f7c")
+	)
+	(label "hours_en"
+		(at 292.1 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6882d8fa-4893-441f-9f19-94824ff94ef7")
+	)
 	(label "hv"
 		(at 463.55 142.24 0)
 		(effects
@@ -5629,6 +5679,26 @@
 		)
 		(uuid "8cc890ab-4c6f-45bf-84f9-9f4bb2e1fa96")
 	)
+	(label "control_3"
+		(at 218.44 171.45 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "9e26557b-4bd5-44ac-92e8-64b8d2bf3b2e")
+	)
+	(label "control_3"
+		(at 292.1 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ad7e7140-bcc0-45e0-990a-8492795445e3")
+	)
 	(label "hv"
 		(at 259.08 144.78 0)
 		(effects
@@ -5658,6 +5728,16 @@
 			(justify left bottom)
 		)
 		(uuid "d930cdf0-04f5-46b7-bd72-6cbbdabf0024")
+	)
+	(label "seconds_en"
+		(at 350.52 276.86 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "dade9f8f-413d-46c3-99f5-4f7d7877d8ca")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -5750,7 +5830,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 459.994 179.324 90)
 			(effects
 				(font
@@ -5984,6 +6064,73 @@
 			(project "pcb_v0"
 				(path "/a1fa5a30-e55c-4a07-9b56-0e31f34de309"
 					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_US")
+		(at 222.25 171.45 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "249cf602-e0c7-4817-9def-c43c67912292")
+		(property "Reference" "R9"
+			(at 222.25 165.1 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_US"
+			(at 222.25 167.64 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+			(at 221.996 172.466 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 222.25 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 222.25 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "5b258f76-c50d-4898-ae0b-2897dad4b5bc")
+		)
+		(pin "1"
+			(uuid "6ac1395c-7bfb-4c4e-9804-cd0bb9cd550a")
+		)
+		(instances
+			(project "pcb_v0"
+				(path "/a1fa5a30-e55c-4a07-9b56-0e31f34de309"
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -6314,7 +6461,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 459.994 141.224 90)
 			(effects
 				(font
@@ -7050,7 +7197,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 232.664 158.496 90)
 			(effects
 				(font
@@ -7247,7 +7394,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 459.994 103.124 90)
 			(effects
 				(font
@@ -7575,7 +7722,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 459.994 217.424 90)
 			(effects
 				(font
@@ -8592,7 +8739,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 459.994 293.624 90)
 			(effects
 				(font
@@ -8932,7 +9079,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal"
 			(at 459.994 255.524 90)
 			(effects
 				(font
@@ -9544,7 +9691,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
 			(at 258.064 158.496 90)
 			(effects
 				(font

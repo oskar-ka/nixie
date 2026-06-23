@@ -104,9 +104,17 @@ Skal power supply være på et separat print?
 - Ensretter IC
     - sdf
 
+## Udførsel, lagkagekasse
+Bruger den første kasse der blev bygget, den laserskårede. 
+6 IN-8 rør, 2 NE-2 lamper. Ingen optokoblere. 
+Forsynet med 170V reguleret direkte fra ensrettet mains, derudover lille indpakket 5V AC-DC forsyning. 
+Forsyning på separat print, som hænger under styreprint med 20mm standoffs, og bruger disse til forbindelse.
+Ensretter, CRC filter, TO-3 transistor, (en cap mere?)
+Strømindgang via IEC C7 stik uden ground, intet at bruge det til.
 
 
-## Komponenter
+
+## Komponenter, generel
 - Lamper
     - 6x IN-8
     - 2/4x NE-2
@@ -128,8 +136,10 @@ Skal power supply være på et separat print?
     - Quad optokobler f.eks. LTV-845M x4
     - SN74141 x4
     - MPSA42 NPN transistor
+    - 6x Anodemodstande til nixierør 1/2W
+    - 2x Anodemodstande til NE2 lamper 1/4W
 
-## Case
+## Kabinet
 ### Varmeafgivelse
 - Original laserskåret lagkagekasse
     - Test 1: P=4W, UT=22C, IT=67C &rarr; +45C v. 4W = 11.25 K/W
