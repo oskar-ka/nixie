@@ -79,6 +79,9 @@ Skal power supply være på et separat print?
 - Adam tech
     - HSK-53-01 Højde: 18.5mm
     - HSK-55-01 Højde: 18.5mm
+- [680-5A](https://mou.sr/4eQcQgR)
+    - 12.7mm højde
+    - 46x46mm footprint
 
 
 ### Heatsinks
@@ -147,3 +150,4 @@ Strømindgang via IEC C7 stik uden ground, intet at bruge det til.
     - Test 3: P=2W, UT=22C, IT=49C &rarr; +26C v. 2W = 13.5  K/W
     - Test 4: P=1W, UT=22C, IT=38C &rarr; +16C v. 1W = 16    K/W
     
+SMD keramiske kondensatorer 2.2uF 450V [her](https://mou.sr/4eBqHqi)
