@@ -1,12 +1,15 @@
 
-## Setup
-Dimming?
-
+# Features
 - 6x IN-8
 - 2/4x NE-2
+- GPS disciplined, temperature compensated crystal oscillator
+- Lysnetspænding i EU kan lovligt variere mellem 207Vac til 253Vac, som giver halveret DC på 146-182Vdc
+- Automatisk lysstyrkedæmpning
+- Temperaturføler
+- Komponenter skal virke ved 85C (varm dag &leq;40C+4W*10K/W=80C)
 
 
-## Strømforsyning
+# Strømforsyning
 Nixie uret skal bruge to spændinger for at fungere: 5Vdc til microcontroller og logiske kredse, samt 180Vdc til at trække nixierørene. Hvert rør kan tåle op til 3.5mA, så med 6 rør skal strømforsyningen levere 21mA + lidt til de 4 små nixie prikker, så i alt maks. 30mA v. 180Vdc. Det er nok ikke nødvendigt med PFC ved 30mA, men det kunne måske være sjovt at lave hvis der er plads til det. Evt. kan strøforsyningen blive lavet på et separat print, som kan placeres under nixie-printet, så burde der være masser af plads. Skal den kunne skifte mellem 230Vac og 120Vac, og skal den gøre det automatisk?
 
 
@@ -20,10 +23,6 @@ Nixie uret skal bruge to spændinger for at fungere: 5Vdc til microcontroller og
     - &lt;1mA
 - 180Vdc, 20mA
 - Current limiting, [foldback](https://www.eeeguide.com/foldback-current-limiting-circuit/)
-- GPS disciplined, temperature compensated crystal oscillator
-- Lysnetspænding i EU kan lovligt variere mellem 207Vac til 253Vac, som giver halveret DC på 146-182Vdc
-- Automatisk lysstyrkedæmpning
-- Temperature sensor?
 
 ### Der findes mange forskellige måder at opnå disse to spændinger:
 - 12/24Vdc indgang &rarr; DC-DC til 5V + boost converter til 180Vdc
@@ -86,8 +85,6 @@ Skal power supply være på et separat print?
     - 46x46mm footprint
 
 
-### Heatsinks
-
 ### Komponenter
 - AC Sikring + sikringsholder
     - 100mA glassikring?
@@ -109,7 +106,25 @@ Skal power supply være på et separat print?
 - Ensretter IC
     - sdf
 
-## Udførsel, lagkagekasse
+# Timekeeping
+Forskellige niveauer af præcision: MCUens interne RC oscillator, normal kvartskrystal, temperaturkonpenseret krystaloscillator (TCXO), ovnkontrolleret krystaloscillator (OCXO). Desuden kan en oscillator *disciplineres* mht. et præcist eksternt signal, f.eks. GPS for en stor forbedring i stabilitet.
+
+Stratum 3??
+
+- OCXO
+    - [CTS 139VGEVS10M000](https://mou.sr/4afKvxZ)
+    - Bruger en lille "ovn" til at opvarme krystallen og holde dens temperatur stabil
+- TCXO
+    - Typisk tilgændelige i 280ppb, hvilket er super
+    - De har god temperaturstabilitet, men ikke nødvedigvis god *aging*
+    - MEMS vs quartz. MEMS har bedre aging, bedre temperaturforudsigelighed, bedre dynamisk stabilitet (når temp. ændrer sig), lavere fejlrater. De er dog dyrere, har mere fasestøj, og bruger mere strøm.
+    - [SiTime MEMS](https://www.sitime.com/products/ultrastable-mhz-super-tcxos/super-tcxos/sit5356)
+
+Vi vil gerne under 1s afvigelse over et år uden GPS, dette 
+
+
+
+# Udførsel, lagkagekasse
 Bruger den første kasse der blev bygget, den laserskårede. 
 6 IN-8 rør, 2 NE-2 lamper. Ingen optokoblere. 
 Forsynet med 170V reguleret direkte fra ensrettet mains, derudover lille indpakket 5V AC-DC forsyning. 
@@ -119,7 +134,7 @@ Strømindgang via IEC C7 stik uden ground, intet at bruge det til.
 
 
 
-## Komponenter, generel
+# Komponenter, generel
 - Lamper
     - 6x IN-8
     - 2/4x NE-2
@@ -144,7 +159,7 @@ Strømindgang via IEC C7 stik uden ground, intet at bruge det til.
     - 6x Anodemodstande til nixierør 1/2W
     - 2x Anodemodstande til NE2 lamper 1/4W
 
-## Kabinet
+# Enclosure
 ### Varmeafgivelse
 - Original laserskåret lagkagekasse
     - Test 1: P=4W, UT=22C, IT=67C &rarr; +45C v. 4W = 11.25 K/W
