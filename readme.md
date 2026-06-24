@@ -20,8 +20,10 @@ Nixie uret skal bruge to spændinger for at fungere: 5Vdc til microcontroller og
     - &lt;1mA
 - 180Vdc, 20mA
 - Current limiting, [foldback](https://www.eeeguide.com/foldback-current-limiting-circuit/)
-- Temperature compensation
+- GPS disciplined, temperature compensated crystal oscillator
 - Lysnetspænding i EU kan lovligt variere mellem 207Vac til 253Vac, som giver halveret DC på 146-182Vdc
+- Automatisk lysstyrkedæmpning
+- Temperature sensor?
 
 ### Der findes mange forskellige måder at opnå disse to spændinger:
 - 12/24Vdc indgang &rarr; DC-DC til 5V + boost converter til 180Vdc
